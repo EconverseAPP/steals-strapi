@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_mosaicos",
+  "info": {
+    "displayName": "Mosaico",
+    "description": "Componente para exibir um mosaico de imagens com título"
+  },
+  "options": {},
+  "attributes": {
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media"
+    }
+  }
+}

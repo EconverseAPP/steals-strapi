@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_banners",
+  "info": {
+    "displayName": "Banner",
+    "description": "Componente para exibir um banner com imagem ou vídeo"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+} 

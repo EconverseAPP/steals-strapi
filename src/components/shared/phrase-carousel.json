@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_phrase_carousels",
+  "info": {
+    "displayName": "Phrase Carousel",
+    "description": "Componente para exibir um carrossel de frases com links"
+  },
+  "options": {},
+  "attributes": {
+    "phrases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.phrase-item"
+    }
+  }
+} 

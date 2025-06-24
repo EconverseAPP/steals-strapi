@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_phrase_items",
+  "info": {
+    "displayName": "Phrase Item",
+    "description": "Item individual de uma frase com texto e link"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+} 

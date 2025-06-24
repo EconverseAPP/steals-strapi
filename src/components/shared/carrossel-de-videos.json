@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_carrossel_de_videos",
+  "info": {
+    "displayName": "Carrossel de Vídeos",
+    "description": "Componente para exibir um carrossel de vídeos com thumbnails"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.video-item"
+    }
+  }
+} 

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_contents",
+  "info": {
+    "displayName": "Contents",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "default": {
+      "type": "boolean"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.banner-with-title",
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.seo",
+        "shared.slider",
+        "shared.mosaico",
+        "shared.divisor",
+        "shared.phrase-carousel",
+        "shared.carrossel-de-looks",
+        "shared.carrossel-de-imagens",
+        "shared.lista-de-links",
+        "shared.banner",
+        "shared.imagem-sessao-livre",
+        "shared.carrossel-de-videos"
+      ]
+    }
+  }
+}

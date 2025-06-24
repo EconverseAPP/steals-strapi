@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_carrossel_media_items",
+  "info": {
+    "displayName": "Carrossel Media Item",
+    "description": "Item individual do carrossel com mídia, título, link e CTA"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    }
+  }
+} 

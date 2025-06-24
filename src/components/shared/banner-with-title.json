@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_banner_with_titles",
+  "info": {
+    "displayName": "banner-with-title",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

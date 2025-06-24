@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_divisors",
+  "info": {
+    "displayName": "Divisor",
+    "description": "Componente para adicionar espaçamento entre seções"
+  },
+  "options": {},
+  "attributes": {
+    "spacing": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 100
+    }
+  }
+} 

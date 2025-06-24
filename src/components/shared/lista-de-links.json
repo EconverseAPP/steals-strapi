@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_lista_de_links",
+  "info": {
+    "displayName": "Lista de Links",
+    "description": "Componente para exibir uma lista de links com título"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link-item"
+    }
+  }
+} 

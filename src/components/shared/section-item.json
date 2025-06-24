@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_section_items",
+  "info": {
+    "displayName": "Section Item",
+    "description": "Item de seção com posicionamento livre"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "posX": {
+      "type": "integer",
+      "required": true
+    },
+    "posY": {
+      "type": "integer",
+      "required": true
+    },
+    "largura": {
+      "type": "integer",
+      "required": true
+    },
+    "zIndex": {
+      "type": "integer",
+      "default": 1
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+} 

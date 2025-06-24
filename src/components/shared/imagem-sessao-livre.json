@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_imagem_sessao_livres",
+  "info": {
+    "displayName": "Imagem Sessão Livre",
+    "description": "Componente para exibir uma imagem com seções posicionadas livremente"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.section-item"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_carrossel_look_items",
+  "info": {
+    "displayName": "Carrossel Look Item",
+    "description": "Item individual do carrossel de looks com mídia"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+} 

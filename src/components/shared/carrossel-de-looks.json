@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_carrossel_de_looks",
+  "info": {
+    "displayName": "Carrossel de Looks",
+    "description": "Componente para exibir um carrossel de looks com scroll automático"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.carrossel-look-item"
+    },
+    "scroll_automatico": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

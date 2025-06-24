@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_carrossel_de_imagens",
+  "info": {
+    "displayName": "Carrossel de Imagens",
+    "description": "Componente para exibir um carrossel de imagens com diferentes estilos"
+  },
+  "options": {},
+  "attributes": {
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "Estilo 1",
+        "Estilo 2"
+      ],
+      "required": true
+    },
+    "pagination": {
+      "type": "boolean",
+      "default": false
+    },
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.carrossel-media-item"
+    }
+  }
+} 

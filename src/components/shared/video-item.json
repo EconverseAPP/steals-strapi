@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_video_items",
+  "info": {
+    "displayName": "Video Item",
+    "description": "Item individual de vídeo com thumbnail e informações"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "allowedTypes": ["videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    }
+  }
+} 
