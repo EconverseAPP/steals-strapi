@@ -15,8 +15,8 @@ export interface SharedBanner extends Struct.ComponentSchema {
 export interface SharedBannerWithTitle extends Struct.ComponentSchema {
   collectionName: 'components_shared_banner_with_titles';
   info: {
-    description: '';
-    displayName: 'banner-with-title';
+    description: 'Banner com t\u00EDtulo e descri\u00E7\u00E3o';
+    displayName: 'Banner com t\u00EDtulo';
   };
   attributes: {
     ctaText: Schema.Attribute.String;
@@ -118,6 +118,7 @@ export interface SharedContents extends Struct.ComponentSchema {
         'shared.banner',
         'shared.imagem-sessao-livre',
         'shared.carrossel-de-videos',
+        'shared.vitrine-produtos',
       ]
     >;
     default: Schema.Attribute.Boolean;
@@ -311,6 +312,24 @@ export interface SharedVideoItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedVitrineProdutos extends Struct.ComponentSchema {
+  collectionName: 'components_shared_vitrine_produtos';
+  info: {
+    description: 'Componente para exibir uma vitrine de produtos com t\u00EDtulo, CTA e handle da cole\u00E7\u00E3o';
+    displayName: 'Vitrine de Produtos';
+  };
+  attributes: {
+    ctaText: Schema.Attribute.String;
+    handle: Schema.Attribute.String & Schema.Attribute.Required;
+    tipo_exibicao: Schema.Attribute.Enumeration<
+      ['horizontal', 'lista_enumerada', 'multiplas_linhas']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'horizontal'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -336,6 +355,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.video-item': SharedVideoItem;
+      'shared.vitrine-produtos': SharedVitrineProdutos;
     }
   }
 }

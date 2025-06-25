@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_vitrine_produtos",
+  "info": {
+    "displayName": "Vitrine de Produtos",
+    "description": "Componente para exibir uma vitrine de produtos com título, CTA e handle da coleção"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "ctaText": {
+      "type": "string",
+      "required": false
+    },
+    "handle": {
+      "type": "string",
+      "required": true
+    },
+    "tipo_exibicao": {
+      "type": "enumeration",
+      "enum": [
+        "horizontal",
+        "lista_enumerada",
+        "multiplas_linhas"
+      ],
+      "default": "horizontal",
+      "required": true
+    }
+  }
+} 

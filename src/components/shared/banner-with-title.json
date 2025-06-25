@@ -1,8 +1,8 @@
 {
   "collectionName": "components_shared_banner_with_titles",
   "info": {
-    "displayName": "banner-with-title",
-    "description": ""
+    "displayName": "Banner com título",
+    "description": "Banner com título e descrição"
   },
   "options": {},
   "attributes": {
