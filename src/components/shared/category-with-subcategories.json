@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_category_with_subcategories",
+  "info": {
+    "displayName": "Category with Subcategories",
+    "description": "Category that can contain subcategories"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.category"
+    }
+  }
+}

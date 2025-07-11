@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_category",
+  "info": {
+    "displayName": "Category",
+    "description": "Common category component with title and link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.category-item"
+    }
+  }
+} 

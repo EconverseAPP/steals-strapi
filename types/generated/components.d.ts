@@ -94,6 +94,70 @@ export interface SharedCarrosselMediaItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCategory extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category';
+  info: {
+    description: 'Common category component with title and link';
+    displayName: 'Category';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'shared.category-item', true>;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCategoryBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_banner';
+  info: {
+    description: 'Component to display a category with banner, title and destination';
+    displayName: 'Category Banner';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCategoryBannerList extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_banner_list';
+  info: {
+    description: 'Container to organize multiple category banners';
+    displayName: 'Category Banner List';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'shared.category-banner', true> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCategoryItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_item';
+  info: {
+    description: 'Basic category item without recursion';
+    displayName: 'Category Item';
+  };
+  attributes: {
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCategoryWithSubcategories
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_with_subcategories';
+  info: {
+    description: 'Category that can contain subcategories';
+    displayName: 'Category with Subcategories';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'shared.category', true>;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedContents extends Struct.ComponentSchema {
   collectionName: 'components_shared_contents';
   info: {
@@ -192,6 +256,20 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     media: Schema.Attribute.Media<'images' | 'videos'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedMenuContent extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menu_content';
+  info: {
+    description: 'Componente para organizar conte\u00FAdo do menu com t\u00EDtulo e conte\u00FAdo din\u00E2mico';
+    displayName: 'Menu Content';
+  };
+  attributes: {
+    content: Schema.Attribute.DynamicZone<
+      ['shared.category-banner-list', 'shared.category-with-subcategories']
+    >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -340,12 +418,18 @@ declare module '@strapi/strapi' {
       'shared.carrossel-de-videos': SharedCarrosselDeVideos;
       'shared.carrossel-look-item': SharedCarrosselLookItem;
       'shared.carrossel-media-item': SharedCarrosselMediaItem;
+      'shared.category': SharedCategory;
+      'shared.category-banner': SharedCategoryBanner;
+      'shared.category-banner-list': SharedCategoryBannerList;
+      'shared.category-item': SharedCategoryItem;
+      'shared.category-with-subcategories': SharedCategoryWithSubcategories;
       'shared.contents': SharedContents;
       'shared.divisor': SharedDivisor;
       'shared.imagem-sessao-livre': SharedImagemSessaoLivre;
       'shared.link-item': SharedLinkItem;
       'shared.lista-de-links': SharedListaDeLinks;
       'shared.media': SharedMedia;
+      'shared.menu-content': SharedMenuContent;
       'shared.mosaico': SharedMosaico;
       'shared.phrase-carousel': SharedPhraseCarousel;
       'shared.phrase-item': SharedPhraseItem;

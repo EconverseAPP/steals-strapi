@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_menu_content",
+  "info": {
+    "displayName": "Menu Content",
+    "description": "Componente para organizar conteúdo do menu com título e conteúdo dinâmico"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.category-banner-list",
+        "shared.category-with-subcategories"
+      ]
+    }
+  }
+}

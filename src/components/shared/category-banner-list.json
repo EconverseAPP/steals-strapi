@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_category_banner_list",
+  "info": {
+    "displayName": "Category Banner List",
+    "description": "Container to organize multiple category banners"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.category-banner",
+      "required": true
+    }
+  }
+} 

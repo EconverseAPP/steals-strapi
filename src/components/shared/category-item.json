@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_category_item",
+  "info": {
+    "displayName": "Category Item",
+    "description": "Basic category item without recursion"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+} 
