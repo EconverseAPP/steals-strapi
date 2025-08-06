@@ -395,6 +395,31 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMarcaMarca extends Struct.SingleTypeSchema {
+  collectionName: 'marcas';
+  info: {
+    displayName: 'Marca';
+    pluralName: 'marcas';
+    singularName: 'marca';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banners: Schema.Attribute.Component<'shared.banner', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::marca.marca'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMenuMenu extends Struct.SingleTypeSchema {
   collectionName: 'menus';
   info: {
@@ -931,6 +956,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::home.home': ApiHomeHome;
+      'api::marca.marca': ApiMarcaMarca;
       'api::menu.menu': ApiMenuMenu;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

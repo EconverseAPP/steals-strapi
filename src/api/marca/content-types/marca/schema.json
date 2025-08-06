@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marca"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "banners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.banner"
+    }
+  }
+}
